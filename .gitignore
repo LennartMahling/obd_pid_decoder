@@ -1,1 +1,15 @@
-﻿cmake-build-debug
+﻿# CMake / Build-Verzeichnisse
+cmake-build-*/
+build/
+out/
+
+# FetchContent-Downloads (falls außerhalb des Build-Ordners angelegt)
+_deps/
+
+# CLion / Jetbrains IDE
+.idea/
+*.iml
+
+# Betriebssystem-Artefakte
+.DB_Store
+Thumbs.db
