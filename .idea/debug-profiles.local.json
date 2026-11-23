@@ -1,0 +1,9 @@
+{
+  "debug-profiles": [
+    {
+      "id": "070e0918-37e2-42a2-b292-3c218085057b",
+      "type": "gdb",
+      "name": "GDB"
+    }
+  ]
+}
