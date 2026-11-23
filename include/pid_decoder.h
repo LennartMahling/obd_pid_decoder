@@ -1,0 +1,8 @@
+﻿//
+// Created by User on 23.11.2026.
+//
+
+#ifndef OBD_PID_DECODER_PID_DECODER_H
+#define OBD_PID_DECODER_PID_DECODER_H
+
+#endif //OBD_PID_DECODER_PID_DECODER_H
