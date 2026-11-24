@@ -1,8 +1,21 @@
-﻿//
-// Created by User on 23.11.2026.
-//
+﻿#pragma once
+#include <cstdint>
+#include <optional>
+#include <string>
+#include <vector>
 
-#ifndef OBD_PID_DECODER_PID_DECODER_H
-#define OBD_PID_DECODER_PID_DECODER_H
 
-#endif //OBD_PID_DECODER_PID_DECODER_H
+namespace obd::decoder
+{
+    struct ParsedResponse
+    {
+        std::string mode;
+        std::string pid;
+        std::vector<std::string> dataBytes;
+    };
+
+    //Funktionen
+    std::optional<ParsedResponse> parse(std::string rawResponse);
+    std::optional<uint8_t> hexToDec(std::string hexByte);
+    std::optional<double> decodeRPM(std::string rawResponse);
+}

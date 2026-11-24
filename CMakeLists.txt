@@ -7,13 +7,13 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 # Kernlogik als statische Bibliothek bauen
-add_library(pid_decoder STATIC
+add_library(pid_decoder
     src/pid_decoder.cpp
 )
 
 # Public bedeutet: Wer gegen pid_decoder linkt (CLI & Tests) bekomme 'include/' automatisch mit
 target_include_directories(pid_decoder PUBLIC
-    include
+        include
 )
 
 # CLI-Programm bauen und mit der Decoder-Bibliothek verknüpfen
@@ -46,4 +46,4 @@ target_link_libraries(test_pid_decoder PRIVATE
     GTest::gtest_main
 )
 
-gtest_discover_tests(tests_pid_decoder)
+gtest_discover_tests(test_pid_decoder)
